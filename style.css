@@ -608,6 +608,10 @@ body {
     color: #4a4a4a;
 }
 
+.currently-card-wide {
+    grid-column: span 2;
+}
+
 .currently-card strong {
     color: #1f1f1f;
 }
