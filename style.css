@@ -598,9 +598,8 @@ body {
     padding: 1.5rem;
 }
 
-.currently-symbol {
-    font-size: 1rem;
-    color: #7ba3c9;
+.currently-emoji {
+    font-size: 1.3rem;
 }
 
 .currently-card p {
