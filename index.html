@@ -3,113 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selina Wang</title>
+    <title>Selina Wang ⋆˙⟡</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cursor-glow"></div>
+    <!-- Floating nav -->
+    <nav class="nav">
+        <a href="#" class="nav-logo">sw ⋆˙⟡</a>
+        <div class="nav-links">
+            <a href="#about">about</a>
+            <a href="#experience">experience</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+        </div>
+    </nav>
 
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-content">
-            <p class="hero-deco">&#x22C6;&#x02D9;&#x27E1;</p>
+        <div class="hero-inner">
             <h1 class="hero-name">Selina Wang</h1>
-            <p class="hero-deco">&#x27E1;&#x02D9;&#x22C6;</p>
+            <p class="hero-sub">cs + stats @ harvard ⋆˙⟡</p>
+            <p class="hero-desc">a collection of projects, internships, and experiments</p>
+            <div class="hero-links">
+                <a href="https://github.com/selinaaavt" target="_blank" class="icon-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="mailto:selina_wang@college.harvard.edu" class="icon-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+            </div>
         </div>
-        <div class="scroll-hint">
-            <span>scroll</span>
-            <div class="scroll-line"></div>
+        <p class="scroll-text">scroll ..slowly:)</p>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">about me</h2>
+            <div class="glass-card about-card">
+                <p>hi! i'm selina, a sophomore studying Computer Science and Statistics at Harvard. i like building reliable systems, making AI safer, and thinking about infrastructure problems.</p>
+                <p>when i'm not coding, i'm probably reading about alignment, exploring mechanistic interpretability, or building tools for communities that need them.</p>
+                <div class="about-tags">
+                    <span class="tag">ai safety</span>
+                    <span class="tag">systems</span>
+                    <span class="tag">machine learning</span>
+                    <span class="tag">full-stack</span>
+                    <span class="tag">infrastructure</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section" id="about">
+    <!-- Experience -->
+    <section id="experience" class="section">
         <div class="container">
-            <p class="intro">
-                sophomore at harvard studying cs + statistics.
-                <br>interested in systems, machine learning, and ai safety.
-            </p>
-        </div>
-    </section>
-
-    <section class="section" id="experience">
-        <div class="container">
-            <h2 class="label">experience</h2>
-            <div class="entries">
-                <div class="entry">
-                    <span class="entry-time">2026</span>
-                    <div class="entry-info">
-                        <span class="entry-title">Software Engineer Intern</span>
-                        <span class="entry-place">AWS, Signer Team</span>
+            <h2 class="section-title">experience</h2>
+            <div class="cards-grid">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <span class="card-date">summer 2026</span>
+                    </div>
+                    <h3 class="card-title">Software Engineer Intern</h3>
+                    <p class="card-company">AWS, Signer Team</p>
+                    <p class="card-desc">Shipped Profile Aliases for AWS Signer. Eliminated consumer-side policy updates on key rotation across 634+ signing profiles and 20+ regions on a service handling 200+ TPS.</p>
+                    <div class="card-tags">
+                        <span class="tag">aws</span>
+                        <span class="tag">dynamodb</span>
+                        <span class="tag">java</span>
                     </div>
                 </div>
-                <div class="entry">
-                    <span class="entry-time">2024 - 25</span>
-                    <div class="entry-info">
-                        <span class="entry-title">Junior Software Engineer</span>
-                        <span class="entry-place">Amazon, Traffic Engineering</span>
+                <div class="glass-card">
+                    <div class="card-header">
+                        <span class="card-date">2024 - 2025</span>
+                    </div>
+                    <h3 class="card-title">Junior Software Engineer</h3>
+                    <p class="card-company">Amazon, Traffic Engineering</p>
+                    <p class="card-desc">Built first-ever automated visibility into an S-Team mandated security migration saving $1.7M/year. ETL pipeline tracking 169K+ service relationships across 35K+ applications.</p>
+                    <div class="card-tags">
+                        <span class="tag">lambda</span>
+                        <span class="tag">redshift</span>
+                        <span class="tag">eventbridge</span>
                     </div>
                 </div>
-                <div class="entry">
-                    <span class="entry-time">2024</span>
-                    <div class="entry-info">
-                        <span class="entry-title">Research Assistant</span>
-                        <span class="entry-place">Carnegie Mellon University</span>
+                <div class="glass-card">
+                    <div class="card-header">
+                        <span class="card-date">summer 2024</span>
+                    </div>
+                    <h3 class="card-title">Research Assistant</h3>
+                    <p class="card-company">Carnegie Mellon University</p>
+                    <p class="card-desc">Built an interactive Unity VR environment simulating trauma triggers with OpenAI-powered adaptive conversations for therapeutic sessions.</p>
+                    <div class="card-tags">
+                        <span class="tag">unity</span>
+                        <span class="tag">c#</span>
+                        <span class="tag">openai</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="projects">
+    <!-- Projects -->
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="label">projects</h2>
-            <div class="entries">
-                <a href="https://github.com/selinaaavt/benchcheck" class="entry entry-link" target="_blank">
-                    <span class="entry-time">2025</span>
-                    <div class="entry-info">
-                        <span class="entry-title">benchcheck</span>
-                        <span class="entry-desc">llm benchmark contamination detector. 4-signal memorization analysis, 0% false positives on clean benchmarks.</span>
+            <h2 class="section-title">projects</h2>
+            <div class="cards-grid">
+                <a href="https://github.com/selinaaavt/benchcheck" target="_blank" class="glass-card card-link">
+                    <h3 class="card-title">benchcheck</h3>
+                    <p class="card-desc">LLM benchmark contamination detector. 4-signal memorization analysis achieving 0% false positives on clean benchmarks and 91% precision at 30% contamination.</p>
+                    <div class="card-tags">
+                        <span class="tag">python</span>
+                        <span class="tag">transformers</span>
+                        <span class="tag">nlp</span>
                     </div>
+                    <span class="card-arrow">&rarr;</span>
                 </a>
-                <a href="https://github.com/breaktime-ma/breaktime" class="entry entry-link" target="_blank">
-                    <span class="entry-time">2025</span>
-                    <div class="entry-info">
-                        <span class="entry-title">breaktime</span>
-                        <span class="entry-desc">full-stack inventory management for homeless services. barcode scanner, role-based crud, analytics.</span>
+                <a href="https://github.com/breaktime-ma/breaktime" target="_blank" class="glass-card card-link">
+                    <h3 class="card-title">breaktime</h3>
+                    <p class="card-desc">Full-stack inventory management for a homeless services platform. Real-time barcode scanner, role-based CRUD, analytics dashboards.</p>
+                    <div class="card-tags">
+                        <span class="tag">react</span>
+                        <span class="tag">typescript</span>
+                        <span class="tag">supabase</span>
                     </div>
+                    <span class="card-arrow">&rarr;</span>
                 </a>
-                <div class="entry">
-                    <span class="entry-time">2025</span>
-                    <div class="entry-info">
-                        <span class="entry-title">crewai video pipeline</span>
-                        <span class="entry-desc">multi-agent system converting pdfs into narrated videos. hours to under 5 minutes.</span>
+                <div class="glass-card">
+                    <h3 class="card-title">crewai video pipeline</h3>
+                    <p class="card-desc">Multi-agent system converting PDFs into narrated educational videos. Cut production time from hours to under 5 minutes, serving 30+ students.</p>
+                    <div class="card-tags">
+                        <span class="tag">crewai</span>
+                        <span class="tag">python</span>
+                        <span class="tag">multi-agent</span>
                     </div>
                 </div>
-                <div class="entry">
-                    <span class="entry-time">2024</span>
-                    <div class="entry-info">
-                        <span class="entry-title">vr therapy environment</span>
-                        <span class="entry-desc">unity vr with openai-powered adaptive conversations for therapeutic sessions.</span>
+                <div class="glass-card">
+                    <h3 class="card-title">vr therapy environment</h3>
+                    <p class="card-desc">Interactive Unity VR simulating trauma triggers with event-driven scenarios and OpenAI-powered adaptive conversations.</p>
+                    <div class="card-tags">
+                        <span class="tag">unity</span>
+                        <span class="tag">c#</span>
+                        <span class="tag">openai</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="contact">
+    <!-- Skills -->
+    <section class="section">
         <div class="container">
-            <div class="contact">
-                <a href="mailto:selina_wang@college.harvard.edu">email</a>
-                <span class="contact-dot">&#x00B7;</span>
-                <a href="https://github.com/selinaaavt" target="_blank">github</a>
+            <h2 class="section-title">skills</h2>
+            <div class="skills-wrap">
+                <div class="glass-card skill-card">
+                    <h4>languages</h4>
+                    <p>Python, C/C++, TypeScript, JavaScript, Java, SQL, Bash, Swift</p>
+                </div>
+                <div class="glass-card skill-card">
+                    <h4>frameworks</h4>
+                    <p>React, Node.js, pandas, NumPy, scikit-learn, PySpark, CrewAI</p>
+                </div>
+                <div class="glass-card skill-card">
+                    <h4>infrastructure</h4>
+                    <p>AWS (CDK, Lambda, DynamoDB, Redshift), Docker, PostgreSQL, Supabase, Firebase</p>
+                </div>
+                <div class="glass-card skill-card">
+                    <h4>concepts</h4>
+                    <p>REST APIs, ETL Pipelines, Serverless, CI/CD, ML, Multi-Agent Systems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">contact</h2>
+            <div class="glass-card contact-card">
+                <p>always down to chat about ai safety, cool projects, or anything else!</p>
+                <div class="contact-links">
+                    <a href="mailto:selina_wang@college.harvard.edu" class="contact-item">
+                        <span>selina_wang@college.harvard.edu</span>
+                    </a>
+                    <a href="https://github.com/selinaaavt" target="_blank" class="contact-item">
+                        <span>github.com/selinaaavt</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&#x22C6;&#x02D9;&#x27E1; selina wang &#x27E1;&#x02D9;&#x22C6;</p>
+        <p>built by selina ⋆˙⟡ 2026</p>
     </footer>
 
     <script src="script.js"></script>
