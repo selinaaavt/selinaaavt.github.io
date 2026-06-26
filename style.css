@@ -51,7 +51,7 @@ body {
 }
 
 .nav-logo:hover {
-    color: #f9a8d4;
+    color: #7ba3c9;
 }
 
 .nav-links {
@@ -75,13 +75,13 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: #f9a8d4;
+    background: #7ba3c9;
     border-radius: 1px;
     transition: width 0.3s;
 }
 
 .nav-links a:hover {
-    color: #f9a8d4;
+    color: #7ba3c9;
 }
 
 .nav-links a:hover:after {
@@ -135,7 +135,7 @@ body {
     top: var(--y);
     width: 4px;
     height: 4px;
-    background: #f9a8d4;
+    background: #7ba3c9;
     border-radius: 50%;
     animation: sparkle 3s ease-in-out infinite;
     animation-delay: var(--delay);
@@ -179,7 +179,7 @@ body {
 }
 
 .char:hover {
-    color: #f9a8d4;
+    color: #7ba3c9;
     transform: translateY(-4px) scale(1.1);
     transition: all 0.2s;
 }
@@ -235,7 +235,7 @@ body {
     border-color: rgba(255, 255, 255, 0.8);
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 8px 24px rgba(236, 72, 153, 0.15);
-    color: #f9a8d4;
+    color: #7ba3c9;
 }
 
 .scroll-indicator {
@@ -341,7 +341,7 @@ body {
     font-family: 'Inconsolata', monospace;
     font-size: 0.7rem;
     font-weight: 600;
-    color: #f9a8d4;
+    color: #7ba3c9;
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
@@ -373,7 +373,7 @@ body {
 .pill:hover {
     background: rgba(236, 72, 153, 0.08);
     border-color: rgba(236, 72, 153, 0.3);
-    color: #f9a8d4;
+    color: #7ba3c9;
     transform: scale(1.05);
 }
 
@@ -405,7 +405,7 @@ body {
 .exp-type {
     font-family: 'Inconsolata', monospace;
     font-size: 0.65rem;
-    color: #f9a8d4;
+    color: #7ba3c9;
     background: rgba(236, 72, 153, 0.08);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
@@ -421,7 +421,7 @@ body {
 
 .exp-company {
     font-size: 0.88rem;
-    color: #f9a8d4;
+    color: #7ba3c9;
     font-weight: 500;
     margin-bottom: 0.8rem;
 }
@@ -453,7 +453,7 @@ body {
 
 .tag:hover {
     border-color: rgba(236, 72, 153, 0.4);
-    color: #f9a8d4;
+    color: #7ba3c9;
 }
 
 /* Projects */
@@ -489,7 +489,7 @@ body {
 }
 
 .proj-card:hover .proj-title {
-    color: #f9a8d4;
+    color: #7ba3c9;
 }
 
 .proj-arrow {
@@ -499,14 +499,14 @@ body {
 }
 
 .proj-card:hover .proj-arrow {
-    color: #f9a8d4;
+    color: #7ba3c9;
     transform: translate(3px, -3px);
 }
 
 .proj-subtitle {
     font-family: 'Inconsolata', monospace;
     font-size: 0.78rem;
-    color: #f9a8d4;
+    color: #7ba3c9;
     font-weight: 500;
     margin-bottom: 0.8rem;
 }
@@ -556,7 +556,7 @@ body {
     font-family: 'Inconsolata', monospace;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #f9a8d4;
+    color: #7ba3c9;
     margin-bottom: 0.8rem;
     text-transform: lowercase;
 }
@@ -600,7 +600,7 @@ body {
 
 .currently-symbol {
     font-size: 1rem;
-    color: #f9a8d4;
+    color: #7ba3c9;
 }
 
 .currently-card p {
@@ -649,7 +649,7 @@ body {
 }
 
 .contact-link:hover {
-    color: #f9a8d4;
+    color: #7ba3c9;
     background: rgba(236, 72, 153, 0.05);
     border-color: rgba(236, 72, 153, 0.2);
     transform: translateX(4px);
