@@ -6,11 +6,24 @@
     <title>Selina Wang ⋆˙⟡</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Floating nav -->
+    <!-- Custom cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- Floating orbs background -->
+    <div class="orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+        <div class="orb orb-5"></div>
+    </div>
+
+    <!-- Navigation -->
     <nav class="nav">
         <a href="#" class="nav-logo">sw ⋆˙⟡</a>
         <div class="nav-links">
@@ -23,35 +36,74 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-inner">
-            <h1 class="hero-name">Selina Wang</h1>
-            <p class="hero-sub">cs + stats @ harvard ⋆˙⟡</p>
-            <p class="hero-desc">a collection of projects, internships, and experiments</p>
-            <div class="hero-links">
-                <a href="https://github.com/selinaaavt" target="_blank" class="icon-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        <div class="hero-sparkles">
+            <span class="sparkle" style="--x: 15%; --y: 25%; --delay: 0s;"></span>
+            <span class="sparkle" style="--x: 80%; --y: 20%; --delay: 0.5s;"></span>
+            <span class="sparkle" style="--x: 45%; --y: 70%; --delay: 1s;"></span>
+            <span class="sparkle" style="--x: 70%; --y: 60%; --delay: 1.5s;"></span>
+            <span class="sparkle" style="--x: 25%; --y: 80%; --delay: 2s;"></span>
+            <span class="sparkle" style="--x: 90%; --y: 45%; --delay: 0.3s;"></span>
+            <span class="sparkle" style="--x: 10%; --y: 55%; --delay: 1.8s;"></span>
+            <span class="sparkle" style="--x: 55%; --y: 15%; --delay: 0.8s;"></span>
+        </div>
+        <div class="hero-content" data-animate="hero">
+            <p class="hero-deco">⋆˙⟡</p>
+            <h1 class="hero-name">
+                <span class="char" style="--i:0">S</span><span class="char" style="--i:1">e</span><span class="char" style="--i:2">l</span><span class="char" style="--i:3">i</span><span class="char" style="--i:4">n</span><span class="char" style="--i:5">a</span><span class="char space" style="--i:6"> </span><span class="char" style="--i:7">W</span><span class="char" style="--i:8">a</span><span class="char" style="--i:9">n</span><span class="char" style="--i:10">g</span>
+            </h1>
+            <p class="hero-sub">cs + stats @ harvard</p>
+            <p class="hero-tagline">a collection of projects, internships, and experiments</p>
+            <div class="hero-icons">
+                <a href="https://github.com/selinaaavt" target="_blank" class="hero-icon-btn" data-tooltip="github">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                 </a>
-                <a href="mailto:selina_wang@college.harvard.edu" class="icon-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <a href="mailto:selina_wang@college.harvard.edu" class="hero-icon-btn" data-tooltip="email">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="hero-icon-btn" data-tooltip="linkedin">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
             </div>
         </div>
-        <p class="scroll-text">scroll ..slowly:)</p>
+        <div class="scroll-indicator">
+            <span>scroll ..slowly:)</span>
+            <div class="scroll-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </div>
+        </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">about me</h2>
-            <div class="glass-card about-card">
-                <p>hi! i'm selina, a sophomore studying Computer Science and Statistics at Harvard. i like building reliable systems, making AI safer, and thinking about infrastructure problems.</p>
-                <p>when i'm not coding, i'm probably reading about alignment, exploring mechanistic interpretability, or building tools for communities that need them.</p>
-                <div class="about-tags">
-                    <span class="tag">ai safety</span>
-                    <span class="tag">systems</span>
-                    <span class="tag">machine learning</span>
-                    <span class="tag">full-stack</span>
-                    <span class="tag">infrastructure</span>
+            <h2 class="section-title" data-animate="fade-up">about me</h2>
+            <div class="about-grid">
+                <div class="glass-card glass-card-lg about-text" data-animate="fade-up" data-delay="100">
+                    <p class="about-p">hi! i'm selina, and i'm a sophomore studying <span class="highlight">Computer Science</span> and <span class="highlight">Statistics</span> at Harvard (3.90 GPA).</p>
+                    <p class="about-p">i like building reliable distributed systems, thinking about <span class="highlight">AI safety</span>, and using tech to solve real-world problems for communities that need it.</p>
+                    <p class="about-p">currently exploring mechanistic interpretability, alignment, and multi-agent systems.</p>
+                </div>
+                <div class="about-side" data-animate="fade-up" data-delay="200">
+                    <div class="glass-card info-card">
+                        <span class="info-label">location</span>
+                        <span class="info-value">cambridge, ma</span>
+                    </div>
+                    <div class="glass-card info-card">
+                        <span class="info-label">education</span>
+                        <span class="info-value">harvard '29</span>
+                    </div>
+                    <div class="glass-card info-card">
+                        <span class="info-label">focus</span>
+                        <span class="info-value">systems + ml + safety</span>
+                    </div>
+                    <div class="interest-pills">
+                        <span class="pill">ai safety</span>
+                        <span class="pill">systems</span>
+                        <span class="pill">ml</span>
+                        <span class="pill">full-stack</span>
+                        <span class="pill">infrastructure</span>
+                        <span class="pill">multi-agent</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,45 +112,51 @@
     <!-- Experience -->
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">experience</h2>
-            <div class="cards-grid">
-                <div class="glass-card">
-                    <div class="card-header">
-                        <span class="card-date">summer 2026</span>
+            <h2 class="section-title" data-animate="fade-up">experience</h2>
+            <div class="exp-grid">
+                <div class="glass-card exp-card" data-animate="fade-up" data-delay="0">
+                    <div class="exp-top">
+                        <span class="exp-date">summer 2026</span>
+                        <span class="exp-type">internship</span>
                     </div>
-                    <h3 class="card-title">Software Engineer Intern</h3>
-                    <p class="card-company">AWS, Signer Team</p>
-                    <p class="card-desc">Shipped Profile Aliases for AWS Signer. Eliminated consumer-side policy updates on key rotation across 634+ signing profiles and 20+ regions on a service handling 200+ TPS.</p>
-                    <div class="card-tags">
+                    <h3 class="exp-title">Software Engineer Intern</h3>
+                    <p class="exp-company">AWS, Signer Team</p>
+                    <p class="exp-desc">Shipped Profile Aliases for AWS Signer. Eliminated consumer-side policy updates on key rotation across 634+ signing profiles and 20+ regions on a service handling 200+ TPS. Engineered DynamoDB conditional writes with 3-retry UUID collision mitigation.</p>
+                    <div class="exp-tags">
                         <span class="tag">aws</span>
                         <span class="tag">dynamodb</span>
                         <span class="tag">java</span>
+                        <span class="tag">cdk</span>
                     </div>
                 </div>
-                <div class="glass-card">
-                    <div class="card-header">
-                        <span class="card-date">2024 - 2025</span>
+                <div class="glass-card exp-card" data-animate="fade-up" data-delay="100">
+                    <div class="exp-top">
+                        <span class="exp-date">2024 - 2025</span>
+                        <span class="exp-type">full-time</span>
                     </div>
-                    <h3 class="card-title">Junior Software Engineer</h3>
-                    <p class="card-company">Amazon, Traffic Engineering</p>
-                    <p class="card-desc">Built first-ever automated visibility into an S-Team mandated security migration saving $1.7M/year. ETL pipeline tracking 169K+ service relationships across 35K+ applications.</p>
-                    <div class="card-tags">
+                    <h3 class="exp-title">Junior Software Engineer</h3>
+                    <p class="exp-company">Amazon, Traffic Engineering</p>
+                    <p class="exp-desc">Gave leadership first-ever automated visibility into an S-Team mandated security migration saving $1.7M/year. ETL pipeline tracking 169K+ service relationships and 35K+ applications (217B monthly requests).</p>
+                    <div class="exp-tags">
                         <span class="tag">lambda</span>
                         <span class="tag">redshift</span>
                         <span class="tag">eventbridge</span>
+                        <span class="tag">python</span>
                     </div>
                 </div>
-                <div class="glass-card">
-                    <div class="card-header">
-                        <span class="card-date">summer 2024</span>
+                <div class="glass-card exp-card" data-animate="fade-up" data-delay="200">
+                    <div class="exp-top">
+                        <span class="exp-date">summer 2024</span>
+                        <span class="exp-type">research</span>
                     </div>
-                    <h3 class="card-title">Research Assistant</h3>
-                    <p class="card-company">Carnegie Mellon University</p>
-                    <p class="card-desc">Built an interactive Unity VR environment simulating trauma triggers with OpenAI-powered adaptive conversations for therapeutic sessions.</p>
-                    <div class="card-tags">
+                    <h3 class="exp-title">Research Assistant</h3>
+                    <p class="exp-company">Carnegie Mellon University</p>
+                    <p class="exp-desc">Built an interactive Unity VR environment in C# simulating trauma triggers with event-driven scenarios. Integrated OpenAI API for adaptive real-time conversational support during therapeutic sessions.</p>
+                    <div class="exp-tags">
                         <span class="tag">unity</span>
                         <span class="tag">c#</span>
                         <span class="tag">openai</span>
+                        <span class="tag">vr</span>
                     </div>
                 </div>
             </div>
@@ -108,44 +166,64 @@
     <!-- Projects -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">projects</h2>
-            <div class="cards-grid">
-                <a href="https://github.com/selinaaavt/benchcheck" target="_blank" class="glass-card card-link">
-                    <h3 class="card-title">benchcheck</h3>
-                    <p class="card-desc">LLM benchmark contamination detector. 4-signal memorization analysis achieving 0% false positives on clean benchmarks and 91% precision at 30% contamination.</p>
-                    <div class="card-tags">
+            <h2 class="section-title" data-animate="fade-up">projects</h2>
+            <div class="proj-grid">
+                <a href="https://github.com/selinaaavt/benchcheck" target="_blank" class="glass-card proj-card proj-card-wide" data-animate="fade-up" data-delay="0">
+                    <div class="proj-header">
+                        <h3 class="proj-title">benchcheck</h3>
+                        <span class="proj-arrow">&nearr;</span>
+                    </div>
+                    <p class="proj-subtitle">LLM Benchmark Contamination Detector</p>
+                    <p class="proj-desc">4-signal memorization detector (n-gram overlap, verbatim completion, perturbation gap, shuffle sensitivity) that quantifies how much of an LLM's benchmark score reflects training data recall vs. genuine capability. Achieved 0% false positives on clean benchmarks and 91% precision at 30% contamination. Applied to GPT-2 and Qwen2.5-3B across 4 public science benchmarks.</p>
+                    <div class="proj-stats">
+                        <span class="stat"><strong>0%</strong> false positives</span>
+                        <span class="stat"><strong>91%</strong> precision</span>
+                        <span class="stat"><strong>4</strong> benchmarks</span>
+                    </div>
+                    <div class="proj-tags">
                         <span class="tag">python</span>
                         <span class="tag">transformers</span>
                         <span class="tag">nlp</span>
+                        <span class="tag">ml</span>
                     </div>
-                    <span class="card-arrow">&rarr;</span>
                 </a>
-                <a href="https://github.com/breaktime-ma/breaktime" target="_blank" class="glass-card card-link">
-                    <h3 class="card-title">breaktime</h3>
-                    <p class="card-desc">Full-stack inventory management for a homeless services platform. Real-time barcode scanner, role-based CRUD, analytics dashboards.</p>
-                    <div class="card-tags">
+                <a href="https://github.com/breaktime-ma/breaktime" target="_blank" class="glass-card proj-card" data-animate="fade-up" data-delay="100">
+                    <div class="proj-header">
+                        <h3 class="proj-title">breaktime</h3>
+                        <span class="proj-arrow">&nearr;</span>
+                    </div>
+                    <p class="proj-subtitle">Homeless Services Platform</p>
+                    <p class="proj-desc">Full-stack inventory management with real-time barcode scanner (USB/camera via ZXing), role-based CRUD flows with Zod validation, and analytics dashboards backed by PostgreSQL RPC functions.</p>
+                    <div class="proj-tags">
                         <span class="tag">react</span>
                         <span class="tag">typescript</span>
                         <span class="tag">supabase</span>
+                        <span class="tag">postgresql</span>
                     </div>
-                    <span class="card-arrow">&rarr;</span>
                 </a>
-                <div class="glass-card">
-                    <h3 class="card-title">crewai video pipeline</h3>
-                    <p class="card-desc">Multi-agent system converting PDFs into narrated educational videos. Cut production time from hours to under 5 minutes, serving 30+ students.</p>
-                    <div class="card-tags">
+                <div class="glass-card proj-card" data-animate="fade-up" data-delay="200">
+                    <div class="proj-header">
+                        <h3 class="proj-title">crewai video pipeline</h3>
+                    </div>
+                    <p class="proj-subtitle">Multi-Agent Educational Content</p>
+                    <p class="proj-desc">Multi-agent pipeline (curriculum design, script writing, and review agents) that converts PDFs into narrated videos. Cut production time from hours to under 5 minutes, serving 30+ students with 10+ videos.</p>
+                    <div class="proj-tags">
                         <span class="tag">crewai</span>
                         <span class="tag">python</span>
                         <span class="tag">multi-agent</span>
                     </div>
                 </div>
-                <div class="glass-card">
-                    <h3 class="card-title">vr therapy environment</h3>
-                    <p class="card-desc">Interactive Unity VR simulating trauma triggers with event-driven scenarios and OpenAI-powered adaptive conversations.</p>
-                    <div class="card-tags">
+                <div class="glass-card proj-card" data-animate="fade-up" data-delay="300">
+                    <div class="proj-header">
+                        <h3 class="proj-title">vr therapy</h3>
+                    </div>
+                    <p class="proj-subtitle">Adaptive Therapeutic VR</p>
+                    <p class="proj-desc">Interactive Unity VR environment simulating trauma triggers with event-driven scenarios and OpenAI-powered adaptive real-time conversational support during therapeutic sessions.</p>
+                    <div class="proj-tags">
                         <span class="tag">unity</span>
                         <span class="tag">c#</span>
                         <span class="tag">openai</span>
+                        <span class="tag">xr</span>
                     </div>
                 </div>
             </div>
@@ -155,23 +233,86 @@
     <!-- Skills -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">skills</h2>
-            <div class="skills-wrap">
-                <div class="glass-card skill-card">
+            <h2 class="section-title" data-animate="fade-up">skills</h2>
+            <div class="skills-grid">
+                <div class="glass-card skill-card" data-animate="fade-up" data-delay="0">
+                    <div class="skill-icon">&#x2728;</div>
                     <h4>languages</h4>
-                    <p>Python, C/C++, TypeScript, JavaScript, Java, SQL, Bash, Swift</p>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">C/C++</span>
+                        <span class="skill-pill">TypeScript</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">Java</span>
+                        <span class="skill-pill">SQL</span>
+                        <span class="skill-pill">Bash</span>
+                        <span class="skill-pill">Swift</span>
+                    </div>
                 </div>
-                <div class="glass-card skill-card">
+                <div class="glass-card skill-card" data-animate="fade-up" data-delay="100">
+                    <div class="skill-icon">&#x1F3D7;</div>
                     <h4>frameworks</h4>
-                    <p>React, Node.js, pandas, NumPy, scikit-learn, PySpark, CrewAI</p>
+                    <div class="skill-pills">
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">Node.js</span>
+                        <span class="skill-pill">pandas</span>
+                        <span class="skill-pill">NumPy</span>
+                        <span class="skill-pill">scikit-learn</span>
+                        <span class="skill-pill">PySpark</span>
+                        <span class="skill-pill">CrewAI</span>
+                    </div>
                 </div>
-                <div class="glass-card skill-card">
+                <div class="glass-card skill-card" data-animate="fade-up" data-delay="200">
+                    <div class="skill-icon">&#x2601;</div>
                     <h4>infrastructure</h4>
-                    <p>AWS (CDK, Lambda, DynamoDB, Redshift), Docker, PostgreSQL, Supabase, Firebase</p>
+                    <div class="skill-pills">
+                        <span class="skill-pill">AWS</span>
+                        <span class="skill-pill">CDK</span>
+                        <span class="skill-pill">Lambda</span>
+                        <span class="skill-pill">DynamoDB</span>
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">PostgreSQL</span>
+                        <span class="skill-pill">Supabase</span>
+                        <span class="skill-pill">Firebase</span>
+                    </div>
                 </div>
-                <div class="glass-card skill-card">
+                <div class="glass-card skill-card" data-animate="fade-up" data-delay="300">
+                    <div class="skill-icon">&#x1F9E0;</div>
                     <h4>concepts</h4>
-                    <p>REST APIs, ETL Pipelines, Serverless, CI/CD, ML, Multi-Agent Systems</p>
+                    <div class="skill-pills">
+                        <span class="skill-pill">REST APIs</span>
+                        <span class="skill-pill">ETL</span>
+                        <span class="skill-pill">Serverless</span>
+                        <span class="skill-pill">CI/CD</span>
+                        <span class="skill-pill">ML</span>
+                        <span class="skill-pill">LLMs</span>
+                        <span class="skill-pill">Multi-Agent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currently -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">currently</h2>
+            <div class="currently-grid">
+                <div class="glass-card currently-card" data-animate="fade-up" data-delay="0">
+                    <span class="currently-emoji">🔬</span>
+                    <p>AI Safety Fellow @ <strong>Harvard AISST</strong></p>
+                </div>
+                <div class="glass-card currently-card" data-animate="fade-up" data-delay="100">
+                    <span class="currently-emoji">💻</span>
+                    <p>Building with <strong>Harvard Tech for Social Good</strong></p>
+                </div>
+                <div class="glass-card currently-card" data-animate="fade-up" data-delay="200">
+                    <span class="currently-emoji">📚</span>
+                    <p>Studying algorithms, statistical inference & probability</p>
+                </div>
+                <div class="glass-card currently-card" data-animate="fade-up" data-delay="300">
+                    <span class="currently-emoji">🤖</span>
+                    <p>Exploring mechanistic interpretability & alignment</p>
                 </div>
             </div>
         </div>
@@ -180,14 +321,16 @@
     <!-- Contact -->
     <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">contact</h2>
-            <div class="glass-card contact-card">
-                <p>always down to chat about ai safety, cool projects, or anything else!</p>
-                <div class="contact-links">
-                    <a href="mailto:selina_wang@college.harvard.edu" class="contact-item">
+            <h2 class="section-title" data-animate="fade-up">let's connect!</h2>
+            <div class="glass-card contact-card" data-animate="fade-up" data-delay="100">
+                <p class="contact-text">always down to chat about ai safety, cool projects, or anything really :)</p>
+                <div class="contact-grid">
+                    <a href="mailto:selina_wang@college.harvard.edu" class="contact-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         <span>selina_wang@college.harvard.edu</span>
                     </a>
-                    <a href="https://github.com/selinaaavt" target="_blank" class="contact-item">
+                    <a href="https://github.com/selinaaavt" target="_blank" class="contact-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                         <span>github.com/selinaaavt</span>
                     </a>
                 </div>
@@ -195,8 +338,9 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p>built by selina ⋆˙⟡ 2026</p>
+        <p>built with love by selina ⋆˙⟡ 2026</p>
     </footer>
 
     <script src="script.js"></script>

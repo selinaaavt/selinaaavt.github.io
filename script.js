@@ -1,19 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.section');
+    // Custom cursor
+    const cursor = document.querySelector('.cursor');
+    const trail = document.querySelector('.cursor-trail');
+    let mouseX = 0, mouseY = 0;
+    let trailX = 0, trailY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+    });
+
+    function animateTrail() {
+        trailX += (mouseX - trailX) * 0.15;
+        trailY += (mouseY - trailY) * 0.15;
+        trail.style.left = trailX + 'px';
+        trail.style.top = trailY + 'px';
+        requestAnimationFrame(animateTrail);
+    }
+    animateTrail();
+
+    // Cursor hover effect on interactive elements
+    const interactives = document.querySelectorAll('a, .glass-card, button, .pill, .tag, .skill-pill, .char');
+    interactives.forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+    });
+
+    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                const delay = entry.target.dataset.delay || 0;
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, parseInt(delay));
             }
         });
     }, { threshold: 0.1 });
 
-    sections.forEach(section => {
-        section.classList.add('fade-in');
-        observer.observe(section);
+    document.querySelectorAll('[data-animate]').forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
     });
 
-    // Parallax cards on mouse move
+    document.querySelectorAll('.glass-card').forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+
+    // Card tilt on mouse move
     document.querySelectorAll('.glass-card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
@@ -21,13 +58,53 @@ document.addEventListener('DOMContentLoaded', () => {
             const y = e.clientY - rect.top;
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / 20;
-            const rotateY = (centerX - x) / 20;
-            card.style.transform = `translateY(-3px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            const rotateX = (y - centerY) / 25;
+            const rotateY = (centerX - x) / 25;
+
+            card.style.transform = `translateY(-5px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         });
 
         card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) perspective(1000px) rotateX(0deg) rotateY(0deg)';
+            card.style.transform = '';
         });
+    });
+
+    // Parallax orbs on scroll
+    const orbs = document.querySelectorAll('.orb');
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        orbs.forEach((orb, i) => {
+            const speed = (i + 1) * 0.03;
+            orb.style.transform = `translateY(${scrollY * speed}px)`;
+        });
+    });
+
+    // Magnetic effect on hero icons
+    document.querySelectorAll('.hero-icon-btn').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.1)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = '';
+        });
+    });
+
+    // Nav hide on scroll down, show on scroll up
+    const nav = document.querySelector('.nav');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY;
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            nav.style.transform = 'translateX(-50%) translateY(-100px)';
+            nav.style.opacity = '0';
+        } else {
+            nav.style.transform = 'translateX(-50%) translateY(0)';
+            nav.style.opacity = '1';
+        }
+        lastScroll = currentScroll;
     });
 });
