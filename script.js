@@ -1,33 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Custom cursor
-    const cursor = document.querySelector('.cursor');
-    const trail = document.querySelector('.cursor-trail');
-    let mouseX = 0, mouseY = 0;
-    let trailX = 0, trailY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursor.style.left = mouseX + 'px';
-        cursor.style.top = mouseY + 'px';
-    });
-
-    function animateTrail() {
-        trailX += (mouseX - trailX) * 0.15;
-        trailY += (mouseY - trailY) * 0.15;
-        trail.style.left = trailX + 'px';
-        trail.style.top = trailY + 'px';
-        requestAnimationFrame(animateTrail);
-    }
-    animateTrail();
-
-    // Cursor hover effect on interactive elements
-    const interactives = document.querySelectorAll('a, .glass-card, button, .pill, .tag, .skill-pill, .char');
-    interactives.forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
-    });
-
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -66,16 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         card.addEventListener('mouseleave', () => {
             card.style.transform = '';
-        });
-    });
-
-    // Parallax orbs on scroll
-    const orbs = document.querySelectorAll('.orb');
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        orbs.forEach((orb, i) => {
-            const speed = (i + 1) * 0.03;
-            orb.style.transform = `translateY(${scrollY * speed}px)`;
         });
     });
 
