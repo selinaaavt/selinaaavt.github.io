@@ -6,183 +6,110 @@
     <title>Selina Wang</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="#" class="nav-logo">sw</a>
-            <div class="nav-links">
-                <a href="#about">about</a>
-                <a href="#experience">experience</a>
-                <a href="#projects">projects</a>
-                <a href="#contact">contact</a>
-            </div>
-        </div>
-    </nav>
+    <div class="cursor-glow"></div>
 
     <section class="hero">
         <div class="hero-content">
-            <p class="hero-stars">&#x2729; &#x2729; &#x2729;</p>
+            <p class="hero-deco">&#x22C6;&#x02D9;&#x27E1;</p>
             <h1 class="hero-name">Selina Wang</h1>
-            <p class="hero-tagline">cs + stats at harvard. building at the intersection of systems, ml, and infrastructure.</p>
-            <div class="hero-links">
-                <a href="mailto:selina_wang@college.harvard.edu" class="btn">say hi</a>
-                <a href="https://github.com/selinaaavt" class="btn btn-outline" target="_blank">github</a>
-            </div>
+            <p class="hero-deco">&#x27E1;&#x02D9;&#x22C6;</p>
+        </div>
+        <div class="scroll-hint">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <section id="about" class="section">
+    <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title">about</h2>
-            <div class="about-content">
-                <p>
-                    i'm a sophomore at <strong>Harvard</strong> studying computer science and statistics.
-                    i care about building reliable systems, making AI safer, and using tech for real problems.
-                </p>
-                <p>
-                    previously built at <strong>AWS</strong> and <strong>Amazon</strong>.
-                    currently exploring mechanistic interpretability and alignment.
-                </p>
-                <div class="about-details">
-                    <div class="detail">
-                        <span class="detail-label">location</span>
-                        <span class="detail-value">cambridge, ma</span>
-                    </div>
-                    <div class="detail">
-                        <span class="detail-label">education</span>
-                        <span class="detail-value">harvard '29, cs + stats</span>
-                    </div>
-                    <div class="detail">
-                        <span class="detail-label">interests</span>
-                        <span class="detail-value">ai safety, systems, ml</span>
-                    </div>
-                </div>
-            </div>
+            <p class="intro">
+                sophomore at harvard studying cs + statistics.
+                <br>interested in systems, machine learning, and ai safety.
+            </p>
         </div>
     </section>
 
-    <section id="experience" class="section section-alt">
+    <section class="section" id="experience">
         <div class="container">
-            <h2 class="section-title">experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">summer 2026</div>
-                    <div class="timeline-content">
-                        <h3>Software Engineer Intern</h3>
-                        <p class="timeline-company">AWS, Signer Team</p>
-                        <p>Shipped Profile Aliases for AWS Signer. Eliminated consumer-side policy updates on key rotation across 634+ signing profiles and 20+ regions on a service handling 200+ TPS.</p>
+            <h2 class="label">experience</h2>
+            <div class="entries">
+                <div class="entry">
+                    <span class="entry-time">2026</span>
+                    <div class="entry-info">
+                        <span class="entry-title">Software Engineer Intern</span>
+                        <span class="entry-place">AWS, Signer Team</span>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2024 – 2025</div>
-                    <div class="timeline-content">
-                        <h3>Junior Software Engineer</h3>
-                        <p class="timeline-company">Amazon, Traffic Engineering</p>
-                        <p>Built first-ever automated visibility into an S-Team mandated security migration saving $1.7M/year. ETL pipeline tracking 169K+ service relationships across 35K+ applications.</p>
+                <div class="entry">
+                    <span class="entry-time">2024 - 25</span>
+                    <div class="entry-info">
+                        <span class="entry-title">Junior Software Engineer</span>
+                        <span class="entry-place">Amazon, Traffic Engineering</span>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">summer 2024</div>
-                    <div class="timeline-content">
-                        <h3>Research Assistant</h3>
-                        <p class="timeline-company">Carnegie Mellon University</p>
-                        <p>Built an interactive Unity VR environment simulating trauma triggers with OpenAI-powered adaptive conversations for therapeutic sessions.</p>
+                <div class="entry">
+                    <span class="entry-time">2024</span>
+                    <div class="entry-info">
+                        <span class="entry-title">Research Assistant</span>
+                        <span class="entry-place">Carnegie Mellon University</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <section class="section" id="projects">
         <div class="container">
-            <h2 class="section-title">projects</h2>
-            <div class="projects-grid">
-                <a href="https://github.com/selinaaavt/benchcheck" class="project-card" target="_blank">
-                    <div class="project-icon">🔍</div>
-                    <h3>benchcheck</h3>
-                    <p>LLM benchmark contamination detector. 4-signal memorization analysis achieving 0% false positives and 91% precision at 30% contamination.</p>
-                    <div class="project-tags">
-                        <span>python</span>
-                        <span>transformers</span>
-                        <span>nlp</span>
+            <h2 class="label">projects</h2>
+            <div class="entries">
+                <a href="https://github.com/selinaaavt/benchcheck" class="entry entry-link" target="_blank">
+                    <span class="entry-time">2025</span>
+                    <div class="entry-info">
+                        <span class="entry-title">benchcheck</span>
+                        <span class="entry-desc">llm benchmark contamination detector. 4-signal memorization analysis, 0% false positives on clean benchmarks.</span>
                     </div>
                 </a>
-                <a href="https://github.com/breaktime-ma/breaktime" class="project-card" target="_blank">
-                    <div class="project-icon">🏠</div>
-                    <h3>breaktime</h3>
-                    <p>Full-stack inventory management for a homeless services platform. Real-time barcode scanner, role-based CRUD, analytics dashboards.</p>
-                    <div class="project-tags">
-                        <span>react</span>
-                        <span>typescript</span>
-                        <span>supabase</span>
+                <a href="https://github.com/breaktime-ma/breaktime" class="entry entry-link" target="_blank">
+                    <span class="entry-time">2025</span>
+                    <div class="entry-info">
+                        <span class="entry-title">breaktime</span>
+                        <span class="entry-desc">full-stack inventory management for homeless services. barcode scanner, role-based crud, analytics.</span>
                     </div>
                 </a>
-                <div class="project-card">
-                    <div class="project-icon">🎬</div>
-                    <h3>crewai video pipeline</h3>
-                    <p>Multi-agent system converting PDFs into narrated videos. Cut production time from hours to under 5 minutes for 30+ students.</p>
-                    <div class="project-tags">
-                        <span>crewai</span>
-                        <span>python</span>
-                        <span>multi-agent</span>
+                <div class="entry">
+                    <span class="entry-time">2025</span>
+                    <div class="entry-info">
+                        <span class="entry-title">crewai video pipeline</span>
+                        <span class="entry-desc">multi-agent system converting pdfs into narrated videos. hours to under 5 minutes.</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-icon">🧠</div>
-                    <h3>vr therapy</h3>
-                    <p>Interactive Unity VR simulating trauma triggers with event-driven scenarios and OpenAI-powered adaptive conversations.</p>
-                    <div class="project-tags">
-                        <span>unity</span>
-                        <span>c#</span>
-                        <span>openai</span>
+                <div class="entry">
+                    <span class="entry-time">2024</span>
+                    <div class="entry-info">
+                        <span class="entry-title">vr therapy environment</span>
+                        <span class="entry-desc">unity vr with openai-powered adaptive conversations for therapeutic sessions.</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section" id="contact">
         <div class="container">
-            <h2 class="section-title">skills</h2>
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <h4>languages</h4>
-                    <p>Python, C/C++, TypeScript, JavaScript, Java, SQL, Bash, Swift</p>
-                </div>
-                <div class="skill-group">
-                    <h4>frameworks</h4>
-                    <p>React, Node.js, pandas, NumPy, scikit-learn, PySpark, CrewAI</p>
-                </div>
-                <div class="skill-group">
-                    <h4>infrastructure</h4>
-                    <p>AWS (CDK, Lambda, DynamoDB, Redshift), Docker, PostgreSQL, Supabase, Firebase</p>
-                </div>
-                <div class="skill-group">
-                    <h4>concepts</h4>
-                    <p>REST APIs, ETL Pipelines, Serverless, CI/CD, Machine Learning, Multi-Agent Systems</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title">contact</h2>
-                <p>always open to chatting about ai safety, interesting projects, or anything else.</p>
-                <div class="contact-links">
-                    <a href="mailto:selina_wang@college.harvard.edu" class="btn">email me</a>
-                    <a href="https://github.com/selinaaavt" class="btn btn-outline" target="_blank">github</a>
-                </div>
+            <div class="contact">
+                <a href="mailto:selina_wang@college.harvard.edu">email</a>
+                <span class="contact-dot">&#x00B7;</span>
+                <a href="https://github.com/selinaaavt" target="_blank">github</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>selina wang, 2026</p>
+        <p>&#x22C6;&#x02D9;&#x27E1; selina wang &#x27E1;&#x02D9;&#x22C6;</p>
     </footer>
 
     <script src="script.js"></script>
