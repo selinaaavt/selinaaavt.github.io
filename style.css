@@ -663,6 +663,64 @@ body {
     color: #9ca3af;
 }
 
+/* Duck */
+.duck {
+    position: fixed;
+    bottom: 30px;
+    left: -60px;
+    z-index: 99;
+    pointer-events: none;
+    transition: transform 0.1s linear;
+    animation: waddle 0.4s ease-in-out infinite;
+}
+
+.duck.flip {
+    transform: scaleX(-1);
+}
+
+@keyframes waddle {
+    0%, 100% { transform: rotate(0deg) translateY(0); }
+    25% { transform: rotate(-3deg) translateY(-2px); }
+    75% { transform: rotate(3deg) translateY(-2px); }
+}
+
+.duck.flip {
+    animation: waddleFlip 0.4s ease-in-out infinite;
+}
+
+@keyframes waddleFlip {
+    0%, 100% { transform: scaleX(-1) rotate(0deg) translateY(0); }
+    25% { transform: scaleX(-1) rotate(-3deg) translateY(-2px); }
+    75% { transform: scaleX(-1) rotate(3deg) translateY(-2px); }
+}
+
+/* Raindrops */
+.raindrop {
+    position: absolute;
+    width: 3px;
+    height: 24px;
+    background: linear-gradient(to bottom, rgba(100, 160, 210, 0.85), transparent);
+    border-radius: 2px;
+    pointer-events: none;
+    animation: fall 1s ease-in forwards;
+    z-index: 2;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+    70% {
+        opacity: 0.7;
+        transform: translateY(120px) scaleY(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(180px) scaleY(0.8);
+    }
+}
+
 /* Animations */
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }

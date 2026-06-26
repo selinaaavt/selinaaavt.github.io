@@ -68,4 +68,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         lastScroll = currentScroll;
     });
+
+    // Duck walks across screen on scroll
+    const duck = document.querySelector('.duck');
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        const progress = window.scrollY / maxScroll;
+        const screenWidth = window.innerWidth;
+        const duckX = progress * (screenWidth + 60) - 60;
+        duck.style.left = duckX + 'px';
+
+        if (window.scrollY < lastScrollY) {
+            duck.classList.add('flip');
+        } else {
+            duck.classList.remove('flip');
+        }
+        lastScrollY = window.scrollY;
+    });
+
+    // Rain effect on hero hover
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        if (Math.random() > 0.6) {
+            const drop = document.createElement('span');
+            drop.classList.add('raindrop');
+            drop.style.left = (e.clientX - rect.left) + 'px';
+            drop.style.top = (e.clientY - rect.top) + 'px';
+            hero.appendChild(drop);
+            setTimeout(() => drop.remove(), 1000);
+        }
+    });
 });
