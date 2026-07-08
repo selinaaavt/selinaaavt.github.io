@@ -238,6 +238,48 @@ body {
     color: #7ba3c9;
 }
 
+/* Resume button (hero) - the primary call to action */
+.hero-resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 44px;
+    padding: 0 1.2rem;
+    border-radius: 14px;
+    border: 1px solid rgba(123, 163, 201, 0.5);
+    background: rgba(123, 163, 201, 0.9);
+    color: #fff;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(123, 163, 201, 0.25);
+}
+
+.hero-resume-btn:hover {
+    background: rgba(93, 126, 161, 0.95);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(123, 163, 201, 0.35);
+}
+
+/* Resume link (nav) */
+.nav-resume {
+    color: #fff !important;
+    background: #7ba3c9;
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.nav-resume:after { display: none; }
+
+.nav-resume:hover {
+    background: #5d7ea1;
+    color: #fff !important;
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 2.5rem;
