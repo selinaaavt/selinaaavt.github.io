@@ -176,7 +176,40 @@
                         <span class="tag">ml</span>
                     </div>
                 </a>
-                <a href="https://github.com/breaktime-ma/breaktime" target="_blank" class="glass-card proj-card" data-animate="fade-up" data-delay="100">
+                <a href="https://github.com/selinaaavt/faultline" target="_blank" class="glass-card proj-card proj-card-wide" data-animate="fade-up" data-delay="100">
+                    <div class="proj-header">
+                        <h3 class="proj-title">faultline</h3>
+                        <span class="proj-arrow">&nearr;</span>
+                    </div>
+                    <p class="proj-subtitle">Deterministic Simulation Tester for Distributed Systems</p>
+                    <p class="proj-desc">A FoundationDB-style tester in Rust that runs a from-scratch Raft consensus implementation inside a fully seeded world (logical-time scheduler, injected partitions/crashes/message loss), so any bug reproduces exactly from its seed. It caught 3 real safety bugs in my own Raft, checks both safety (election + state-machine) and liveness after stabilization, and includes a Wing-Gong linearizability checker. A --raft-buggy mutation mode proves the checker catches reintroduced bugs.</p>
+                    <div class="proj-stats">
+                        <span class="stat"><strong>3</strong> real bugs found</span>
+                        <span class="stat"><strong>0</strong> violations / 2000 seeds</span>
+                        <span class="stat"><strong>42</strong> tests</span>
+                    </div>
+                    <div class="proj-tags">
+                        <span class="tag">rust</span>
+                        <span class="tag">distributed systems</span>
+                        <span class="tag">raft</span>
+                        <span class="tag">consensus</span>
+                    </div>
+                </a>
+                <a href="https://github.com/selinaaavt/kvlab" target="_blank" class="glass-card proj-card" data-animate="fade-up" data-delay="200">
+                    <div class="proj-header">
+                        <h3 class="proj-title">kvlab</h3>
+                        <span class="proj-arrow">&nearr;</span>
+                    </div>
+                    <p class="proj-subtitle">Adaptive In-Memory Cache + Eviction Testbed</p>
+                    <p class="proj-desc">An in-memory KV store in Rust with 5 eviction policies (incl. W-TinyLFU and ARC), a write-ahead log with crash recovery, TTL, and sharded concurrency. Measured that adaptive ARC matches or beats every fixed policy across shifting workloads, re-tuning its recency/frequency target online.</p>
+                    <div class="proj-tags">
+                        <span class="tag">rust</span>
+                        <span class="tag">systems</span>
+                        <span class="tag">caching</span>
+                        <span class="tag">concurrency</span>
+                    </div>
+                </a>
+                <a href="https://github.com/breaktime-ma/breaktime" target="_blank" class="glass-card proj-card" data-animate="fade-up" data-delay="300">
                     <div class="proj-header">
                         <h3 class="proj-title">breaktime</h3>
                         <span class="proj-arrow">&nearr;</span>
@@ -190,7 +223,7 @@
                         <span class="tag">postgresql</span>
                     </div>
                 </a>
-                <div class="glass-card proj-card" data-animate="fade-up" data-delay="200">
+                <div class="glass-card proj-card" data-animate="fade-up" data-delay="400">
                     <div class="proj-header">
                         <h3 class="proj-title">crewai video pipeline</h3>
                     </div>
@@ -202,7 +235,7 @@
                         <span class="tag">multi-agent</span>
                     </div>
                 </div>
-                <div class="glass-card proj-card" data-animate="fade-up" data-delay="300">
+                <div class="glass-card proj-card" data-animate="fade-up" data-delay="500">
                     <div class="proj-header">
                         <h3 class="proj-title">vr therapy</h3>
                     </div>
@@ -264,6 +297,7 @@
                     <h4>languages</h4>
                     <div class="skill-pills">
                         <span class="skill-pill">Python</span>
+                        <span class="skill-pill">Rust</span>
                         <span class="skill-pill">C/C++</span>
                         <span class="skill-pill">TypeScript</span>
                         <span class="skill-pill">JavaScript</span>
